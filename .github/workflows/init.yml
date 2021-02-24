@@ -28,8 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: config
         run: |
-          git credential-manager uninstall
-          git credential-manager install
           git config pull.rebase false
           git remote add server ${{ secrets.SERVER_URL }}
           git remote -v
