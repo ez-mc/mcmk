@@ -29,9 +29,7 @@ jobs:
       - name: Run a one-line script
         run: |
           git remote add server ${{ secrets.SERVER_URL }}
-          git remote -v \
-          server ${{ secrets.SERVER_URL }} \
-          server ${{ secrets.SERVER_URL }}
+          git remote get-url server
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
