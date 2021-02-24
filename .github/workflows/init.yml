@@ -31,7 +31,6 @@ jobs:
           git config pull.rebase false
           git remote add server ${{ secrets.SERVER_URL }}
           git remote -v
-          ls
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
