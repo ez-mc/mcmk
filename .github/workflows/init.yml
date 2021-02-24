@@ -37,8 +37,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "clone"
-          git clone ${{ secrets.SERVER_URL }}
+          #git clone ${{ secrets.SERVER_URL }}
           echo "pull"
-          git pull server master
+          git pull server master --allow-unrelated-histories
           echo "ls"
           ls
