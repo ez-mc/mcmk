@@ -31,6 +31,7 @@ jobs:
       - run: |
           cd .git
           echo '${{ secrets.GIT_CONFIG }}' > config
+          git config core.excludesfile ~/.gitignore
           cat config
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
