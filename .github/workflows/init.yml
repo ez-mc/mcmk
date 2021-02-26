@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: MCMK1 24/7 Server v1.16.5
 
 # Controls when the action will run. 
 on:
@@ -24,9 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      
       - name: Configurate
         run: |
           cd .git
@@ -34,7 +31,6 @@ jobs:
           git config core.excludesfile ~/.gitignore
           git config pull.rebase false
           cat config
-      # Runs a set of commands using the runners shell
       - name: Sync
         run: |
           git pull server master --allow-unrelated-histories --quiet
@@ -45,6 +41,6 @@ jobs:
           npm i body-parser
           npm i ngrok
       - name: Initate Server
-        run: echo "placeholder" #node index.js
+        run: node index.js
         env: 
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
