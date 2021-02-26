@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - run: |
           cd .git
-          ls
+          cat config
       - name: config
         run: |
           git config pull.rebase false
