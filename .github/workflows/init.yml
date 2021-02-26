@@ -32,7 +32,7 @@ jobs:
           git config pull.rebase false
           git config user.name "GitHub Actions Autosave"
           git config user.email "<>"
-          git remote add server ${{ secrets.SERVER_URL }}
+          git remote add server https://${{ secrets.HTTP_LOGIN }}@github.com/ez-mc/javamcserver1.16.5.git
           git remote -v
       - run: |
           cd .git
