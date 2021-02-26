@@ -26,6 +26,9 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
+      - run: |
+          cd .git
+          ls
       - name: config
         run: |
           git config pull.rebase false
