@@ -29,7 +29,6 @@ jobs:
       
       - name: config
         run: |
-          git config pull.rebase false
           git config user.name "GitHub Actions Autosave"
           git config user.email "<>"
     
