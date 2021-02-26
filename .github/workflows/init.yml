@@ -38,6 +38,6 @@ jobs:
           echo "clone"
           #git clone ${{ secrets.SERVER_URL }}
           echo "pull"
-          git pull server master --allow-unrelated-histories --no-rebase
+          git pull server master --allow-unrelated-histories
           echo "ls"
           ls
