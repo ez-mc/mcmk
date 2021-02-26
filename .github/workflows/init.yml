@@ -26,9 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - run: |
-          cd .git
-          cat config
+      
       - name: config
         run: |
           git config pull.rebase false
@@ -36,7 +34,9 @@ jobs:
           git config user.email "<>"
           git remote add server ${{ secrets.SERVER_URL }}
           git remote -v
-
+      - run: |
+          cd .git
+          cat config
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
