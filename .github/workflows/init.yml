@@ -27,16 +27,24 @@ jobs:
 
       # Runs a single command using the runners shell
       
-    
-      - run: |
+      - name: Configurate
+        run: |
           cd .git
           echo '${{ secrets.GIT_CONFIG }}' > config
           git config core.excludesfile ~/.gitignore
+          git config pull.rebase false
           cat config
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Sync
         run: |
-          echo "pull"
-          git pull server master --allow-unrelated-histories --no-rebase
-          echo "ls"
+          git pull server master --allow-unrelated-histories --quiet
           ls
+      - name: Install Dependencies
+        run: |
+          npm i express
+          npm i body-parser
+          npm i ngrok
+      - name: Initate Server
+        run: echo "placeholder" #node index.js
+        env: 
+          NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
