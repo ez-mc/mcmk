@@ -33,6 +33,7 @@ jobs:
           echo '${{ secrets.GIT_CONFIG }}' > config
           git config core.excludesfile ~/.gitignore
           git config pull.rebase false
+          git config receive.shallowUpdate true
           cat config
       - name: Sync
         run: |
