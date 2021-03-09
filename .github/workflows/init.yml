@@ -34,7 +34,6 @@ jobs:
           git config core.excludesfile ~/.gitignore
           git config pull.rebase false
           git config receive.shallowUpdate true
-          git config --unset remote.server.mirror
           cat config
       - name: Sync
         run: |
