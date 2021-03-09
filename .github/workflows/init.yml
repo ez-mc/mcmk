@@ -44,6 +44,7 @@ jobs:
           npm i express
           npm i body-parser
           npm i ngrok
+          npm i os-utils
       - name: Initate Server
         run: node index.js
         env: 
