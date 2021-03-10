@@ -49,3 +49,4 @@ jobs:
         run: node index.js
         env: 
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
+          DDNS_API_KEY: ${{ secrets.DDNS_API_KEY }}
