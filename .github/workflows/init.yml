@@ -37,7 +37,7 @@ jobs:
           cat config
       - name: Sync
         run: |
-          git pull server master --allow-unrelated-histories --unshallow
+          git pull server master --allow-unrelated-histories
           ls
       - name: Install Dependencies
         run: |
@@ -50,3 +50,4 @@ jobs:
         env: 
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
           DDNS_API_KEY: ${{ secrets.DDNS_API_KEY }}
+          ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
