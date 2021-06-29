@@ -37,7 +37,7 @@ jobs:
           cat config
       - name: Sync
         run: |
-          git pull server master --allow-unrelated-histories
+          git pull server gnon --allow-unrelated-histories
           git fetch --unshallow
           ls
       - name: Install Dependencies
