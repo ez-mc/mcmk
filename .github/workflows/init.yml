@@ -38,6 +38,7 @@ jobs:
       - name: Sync
         run: |
           git pull server master --allow-unrelated-histories
+          git fetch --unshallow
           ls
       - name: Install Dependencies
         run: |
