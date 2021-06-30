@@ -26,11 +26,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Setup Java JDK
+        uses: actions/setup-java@v2.1.0
+        with:
+    # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
+          java-version: 16
+          distribution: adopt
+    # Java distribution. See the list of supported distributions in README file
       - uses: actions/checkout@v2
       - name: Configurate
         run: |
-          sudo apt install default-jre
-          sudo update-alternatives --config java
           java -version
           cd .git
           echo '${{ secrets.GIT_CONFIG }}' > config
