@@ -30,6 +30,7 @@ jobs:
       - name: Configurate
         run: |
           sudo apt install default-jdk
+          java -version
           cd .git
           echo '${{ secrets.GIT_CONFIG }}' > config
           git config core.excludesfile ~/.gitignore
