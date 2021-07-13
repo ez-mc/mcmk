@@ -47,6 +47,8 @@ jobs:
       - name: Sync
         run: |
           git pull server gnon --allow-unrelated-histories
+      - name: fetch
+        run: |
           git fetch --unshallow
           ls
       - name: Install Dependencies
