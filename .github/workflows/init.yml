@@ -47,7 +47,7 @@ jobs:
           cat config
       - name: Sync
         run: |
-          git pull server gnon --allow-unrelated-histories
+          git pull server gnon --allow-unrelated-histories -4
       - name: fetch
         run: |
           git fetch --unshallow
