@@ -63,5 +63,4 @@ jobs:
         env: 
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
           DDNS_API_KEY: ${{ secrets.DDNS_API_KEY }}
-          ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-          CONFIG: ${{ secrets.GIT_CONFIG }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
