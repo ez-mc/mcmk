@@ -37,6 +37,7 @@ jobs:
       - name: Configurate
         run: |
           java -version
+          lsb_release -d
           cd .git
           echo '${{ secrets.GIT_CONFIG }}' > config
           git config core.excludesfile ~/.gitignore
